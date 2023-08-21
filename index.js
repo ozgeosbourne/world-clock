@@ -12,29 +12,41 @@ function updateTime() {
   );
 }
 
-  // Paris
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-  let parisDateElement = parisElement.querySelector(".date");
-  let parisTimeElement = parisElement.querySelector(".time");
-  let parisTime = moment().tz("Europe/Paris");
+  // Philly
+  let phillyElement = document.querySelector("#philly");
+  if (phillyElement) {
+  let phillyDateElement = phillyElement.querySelector(".date");
+  let phillyTimeElement = phillyElement.querySelector(".time");
+  let phillyTime = moment().tz("America/New_York");
 
-  parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-  parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]"
+  phillyDateElement.innerHTML = phillyTime.format("MMMM Do YYYY");
+  phillyTimeElement.innerHTML = phillyTime.format("h:mm:ss [<small>]A[</small>]"
   );
 }
 
-  // Seoul
-  let seoulElement = document.querySelector("#seoul");
-  if (seoulElement) {
-  let seoulDateElement = seoulElement.querySelector(".date");
-  let seoulTimeElement = seoulElement.querySelector(".time");
-  let seoulTime = moment().tz("Asia/Seoul");
+  // Berlin
+  let berlinElement = document.querySelector("#berlin");
+  if (berlinElement) {
+  let berlinDateElement = berlinElement.querySelector(".date");
+  let berlinTimeElement = berlinElement.querySelector(".time");
+  let berlinTime = moment().tz("Europe/Berlin");
 
-  seoulDateElement.innerHTML = seoulTime.format("MMMM Do YYYY");
-  seoulTimeElement.innerHTML = seoulTime.format("h:mm:ss [<small>]A[</small>]");
+  berlinDateElement.innerHTML = berlinTime.format("MMMM Do YYYY");
+  berlinTimeElement.innerHTML = berlinTime.format("h:mm:ss [<small>]A[</small>]");
 }
 }
+
+ // Istanbul
+  let istanbulElement = document.querySelector("#istanbul");
+  if (istanbulElement) {
+  let istanbulDateElement = istanbulElement.querySelector(".date");
+  let istanbulTimeElement = istanbulElement.querySelector(".time");
+  let istanbulTime = moment().tz("Europe/Istanbul");
+
+  istanbulDateElement.innerHTML = istanbulTime.format("MMMM Do YYYY");
+  istanbulTimeElement.innerHTML = istanbulTime.format("h:mm:ss [<small>]A[</small>]");
+}
+
 
 function updateCity(event) {
   let cityTimeZone = event.target.value; 
